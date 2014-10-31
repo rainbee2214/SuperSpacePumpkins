@@ -11,7 +11,8 @@ public class CameraPosition : MonoBehaviour
 	public float bound = 3f;
 
 	public Transform target;
-	
+	public GameObject GUI;
+
 	Vector3 origin = new Vector3(0,0,0);
 	Vector3 position;
 
@@ -22,6 +23,7 @@ public class CameraPosition : MonoBehaviour
 	public Material[] boxes;
 	void Start()
 	{
+		GUI.gameObject.SetActive(false);
 		int i = Random.Range (0, boxes.Length);
 		Debug.Log (i);
 		Skybox skybox = gameObject.GetComponent<Skybox>(); 
@@ -43,6 +45,7 @@ public class CameraPosition : MonoBehaviour
 			if (distanceFromPlanet >= targetDistance)
 			{
 				pushingCamera = false;
+				GUI.gameObject.SetActive(true);
 			}
 		}
 

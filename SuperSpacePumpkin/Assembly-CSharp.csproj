@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\PlanePosition.cs" />
      <Compile Include="Assets\Scripts\SphereGenerator.cs" />
      <Compile Include="Assets\Scripts\SphereTester.cs" />
+     <None Include="Assets\Fonts\Walter_Turncoat\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
