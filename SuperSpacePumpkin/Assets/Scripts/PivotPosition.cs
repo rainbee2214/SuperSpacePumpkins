@@ -11,6 +11,7 @@ public class PivotPosition : MonoBehaviour
 	Vector3 origin = new Vector3(0,0,0);
 	Vector3 position;
 
+	public Transform target;
 	public bool addScore = false;
 	void Start()
 	{
@@ -35,6 +36,8 @@ public class PivotPosition : MonoBehaviour
 		position.z = rho*Mathf.Cos(phi);
 		
 		transform.position = position;
+
+		transform.LookAt(target);
 	}
 	
 }

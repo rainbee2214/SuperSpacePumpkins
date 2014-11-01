@@ -36,7 +36,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -72,6 +72,7 @@ MonoBehaviour:
   rho: 0
   phi: 0
   theta: 0
+  target: {fileID: 0}
   addScore: 0
 --- !u!1001 &100100000
 Prefab:
