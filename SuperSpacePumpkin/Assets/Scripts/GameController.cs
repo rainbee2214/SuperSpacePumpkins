@@ -14,6 +14,20 @@ public class GameController : MonoBehaviour
 		get{return score;}
 		set{score += value;}
 	}
+
+	private int planetHealth = 10;
+	public int PlanetHealth
+	{
+		get{return planetHealth;}
+		set{planetHealth += value;}
+	}
+
+	private bool dead;
+	public bool Dead
+	{
+		get{return dead;}
+		set{dead = value;}
+	}
 	#endregion
 
 	void Awake () 
@@ -39,6 +53,10 @@ public class GameController : MonoBehaviour
 
 	void Update () 
 	{
-	
+		if (planetHealth <= 0)
+			dead = true;
+
+		//if (dead)
+			//Application.LoadLevel("Menu");
 	}
 }

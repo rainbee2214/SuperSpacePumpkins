@@ -19,5 +19,6 @@ public class ScoreTracker : MonoBehaviour
 			currentScoreBinary = System.Convert.ToString(currentScoreDecimal, 2);
 			gameObject.guiText.text = "Score: " + currentScoreBinary;
 		}
+
 	}
 }
