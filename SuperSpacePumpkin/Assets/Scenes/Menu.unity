@@ -111,7 +111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 879ced16a2b8068478feedeea6534066, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 879ced16a2b8068478feedeea6534066, type: 2}
@@ -128,6 +128,7 @@ GameObject:
   - 4: {fileID: 142526008}
   - 33: {fileID: 142526007}
   - 23: {fileID: 142526006}
+  - 135: {fileID: 142526009}
   - 114: {fileID: 142526005}
   m_Layer: 0
   m_Name: JackoLantern
@@ -190,11 +191,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 5
+--- !u!135 &142526009
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1618116663}
+  m_GameObject: {fileID: 142526004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1 &243939896
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 243939898}
@@ -211,7 +225,7 @@ GUIText:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13200000, guid: cac8938b0687fce4fa4f21b437580449,
     type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243939896}
   m_Enabled: 1
   serializedVersion: 3
@@ -234,7 +248,7 @@ GUIText:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243939896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .091026932, y: 1.1024313, z: -.0505760163}
@@ -252,6 +266,7 @@ GameObject:
   - 4: {fileID: 463310197}
   - 33: {fileID: 463310196}
   - 23: {fileID: 463310195}
+  - 135: {fileID: 463310198}
   - 114: {fileID: 463310194}
   m_Layer: 0
   m_Name: JackoLantern
@@ -314,6 +329,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 0
+--- !u!135 &463310198
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540617835}
+  m_GameObject: {fileID: 463310193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1001 &518241549
 Prefab:
   m_ObjectHideFlags: 0
@@ -472,56 +500,60 @@ Transform:
   - {fileID: 1265058322}
   - {fileID: 2046329355}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!1001 &720268724
+  m_RootOrder: 4
+--- !u!1001 &713272249
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .408973068
+      value: .5
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.252431393
+      value: .5
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .05057621
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
+    - target: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_RootGameObject: {fileID: 721422809}
+  m_ParentPrefab: {fileID: 100100000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
+  m_RootGameObject: {fileID: 1872355370}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &721422809
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 721422810}
@@ -531,12 +563,12 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &721422810
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 721422809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .408973068, y: -.252431393, z: .05057621}
@@ -557,6 +589,7 @@ GameObject:
   - 4: {fileID: 805432592}
   - 33: {fileID: 805432591}
   - 23: {fileID: 805432590}
+  - 135: {fileID: 805432593}
   - 114: {fileID: 805432589}
   m_Layer: 0
   m_Name: JackoLantern
@@ -619,11 +652,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 3
+--- !u!135 &805432593
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1171301238}
+  m_GameObject: {fileID: 805432588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1 &900244490
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 900244492}
@@ -640,7 +686,7 @@ GUIText:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13200004, guid: cac8938b0687fce4fa4f21b437580449,
     type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 900244490}
   m_Enabled: 1
   serializedVersion: 3
@@ -663,7 +709,7 @@ GUIText:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 900244490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .091026932, y: .352431327, z: -.0505760163}
@@ -681,6 +727,7 @@ GameObject:
   - 4: {fileID: 999593525}
   - 33: {fileID: 999593524}
   - 23: {fileID: 999593523}
+  - 135: {fileID: 999593526}
   - 114: {fileID: 999593522}
   m_Layer: 0
   m_Name: JackoLantern
@@ -743,6 +790,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 7
+--- !u!135 &999593526
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1464493905}
+  m_GameObject: {fileID: 999593521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1001 &1106134777
 Prefab:
   m_ObjectHideFlags: 0
@@ -814,6 +874,7 @@ GameObject:
   - 4: {fileID: 1166713572}
   - 33: {fileID: 1166713571}
   - 23: {fileID: 1166713570}
+  - 135: {fileID: 1166713573}
   - 114: {fileID: 1166713569}
   m_Layer: 0
   m_Name: JackoLantern
@@ -876,6 +937,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 2
+--- !u!135 &1166713573
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1451519835}
+  m_GameObject: {fileID: 1166713568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1001 &1171301238
 Prefab:
   m_ObjectHideFlags: 0
@@ -947,6 +1021,7 @@ GameObject:
   - 4: {fileID: 1265058322}
   - 33: {fileID: 1265058321}
   - 23: {fileID: 1265058320}
+  - 135: {fileID: 1265058323}
   - 114: {fileID: 1265058319}
   m_Layer: 0
   m_Name: JackoLantern
@@ -1009,6 +1084,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 8
+--- !u!135 &1265058323
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 666947511}
+  m_GameObject: {fileID: 1265058318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
+--- !u!1 &1315812594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+  m_PrefabInternal: {fileID: 2090505913}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1315812596}
+  - 114: {fileID: 1315812595}
+  m_Layer: 0
+  m_Name: PumpkinEmmiter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1315812595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: abe4f39f319945c43a6365cc708978dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2090505913}
+  m_GameObject: {fileID: 1315812594}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5383401dc38420e4e994facf1e80364b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  pumpkin: {fileID: 100000, guid: 1f0a2c6f565a00841946a35f0d082cb3, type: 2}
+--- !u!4 &1315812596
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+  m_PrefabInternal: {fileID: 2090505913}
+  m_GameObject: {fileID: 1315812594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2030988708}
+  m_RootOrder: 1
 --- !u!1 &1326695644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1149,7 @@ GameObject:
   - 4: {fileID: 1326695648}
   - 33: {fileID: 1326695647}
   - 23: {fileID: 1326695646}
+  - 135: {fileID: 1326695649}
   - 114: {fileID: 1326695645}
   m_Layer: 0
   m_Name: JackoLantern
@@ -1081,6 +1212,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 6
+--- !u!135 &1326695649
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1664952261}
+  m_GameObject: {fileID: 1326695644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1 &1435286355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1235,7 @@ GameObject:
   - 4: {fileID: 1435286359}
   - 33: {fileID: 1435286358}
   - 23: {fileID: 1435286357}
+  - 135: {fileID: 1435286360}
   - 114: {fileID: 1435286356}
   m_Layer: 0
   m_Name: JackoLantern
@@ -1153,6 +1298,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 4
+--- !u!135 &1435286360
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 518241549}
+  m_GameObject: {fileID: 1435286355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1001 &1451519835
 Prefab:
   m_ObjectHideFlags: 0
@@ -1286,6 +1444,8 @@ GameObject:
   - 23: {fileID: 1500503077}
   - 33: {fileID: 1500503076}
   - 114: {fileID: 1500503075}
+  - 54: {fileID: 1500503079}
+  - 135: {fileID: 1500503078}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Planet
@@ -1319,6 +1479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subdivisions: 2
   radius: 1
+  planetsplosion: {fileID: 100000, guid: 11c99a5655c6ddf4aac3e05bff74ead9, type: 2}
 --- !u!33 &1500503076
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1348,6 +1509,35 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!135 &1500503078
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 879ced16a2b8068478feedeea6534066,
+    type: 2}
+  m_PrefabInternal: {fileID: 12585661}
+  m_GameObject: {fileID: 1500503073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1500503079
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 879ced16a2b8068478feedeea6534066,
+    type: 2}
+  m_PrefabInternal: {fileID: 12585661}
+  m_GameObject: {fileID: 1500503073}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1540617835
 Prefab:
   m_ObjectHideFlags: 0
@@ -1474,11 +1664,12 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1658168311}
   - 132: {fileID: 1658168310}
+  - 114: {fileID: 1658168312}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -1491,7 +1682,7 @@ GUIText:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13200002, guid: cac8938b0687fce4fa4f21b437580449,
     type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1658168309}
   m_Enabled: 1
   serializedVersion: 3
@@ -1514,7 +1705,7 @@ GUIText:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: cac8938b0687fce4fa4f21b437580449, type: 2}
-  m_PrefabInternal: {fileID: 720268724}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1658168309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.360000014, y: .289999992, z: -.05057621}
@@ -1522,6 +1713,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 721422810}
   m_RootOrder: 2
+--- !u!114 &1658168312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1658168309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c6c8b31e243b345a162370bec29042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  play: 1
 --- !u!1001 &1664952261
 Prefab:
   m_ObjectHideFlags: 0
@@ -1647,6 +1850,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2030988708}
   m_RootOrder: 0
+--- !u!1 &1872355370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
+  m_PrefabInternal: {fileID: 713272249}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1872355372}
+  - 132: {fileID: 1872355371}
+  m_Layer: 0
+  m_Name: Message
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &1872355371
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1,
+    type: 2}
+  m_PrefabInternal: {fileID: 713272249}
+  m_GameObject: {fileID: 1872355370}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: a7c4cf4d392378746bd05843c919eda4, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 2335478235
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &1872355372
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
+  m_PrefabInternal: {fileID: 713272249}
+  m_GameObject: {fileID: 1872355370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1879714664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,6 +1912,7 @@ GameObject:
   - 4: {fileID: 1879714668}
   - 33: {fileID: 1879714667}
   - 23: {fileID: 1879714666}
+  - 135: {fileID: 1879714669}
   - 114: {fileID: 1879714665}
   m_Layer: 0
   m_Name: JackoLantern
@@ -1719,6 +1975,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 1
+--- !u!135 &1879714669
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1948918067}
+  m_GameObject: {fileID: 1879714664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1001 &1948918067
 Prefab:
   m_ObjectHideFlags: 0
@@ -1794,7 +2063,7 @@ GameObject:
   - 81: {fileID: 2030988704}
   - 45: {fileID: 2030988709}
   - 114: {fileID: 2030988710}
-  - 82: {fileID: 2030988711}
+  - 82: {fileID: 2030988713}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1870,6 +2139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1813621265}
+  - {fileID: 1315812596}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!45 &2030988709
@@ -1901,21 +2171,23 @@ MonoBehaviour:
   bound: 3
   target: {fileID: 1500503074}
   GUI: {fileID: 721422809}
+  messageGUI: {fileID: 1872355370}
   planetPushSpeed: .0500000007
   targetDistance: 10
   boxes:
   - {fileID: 2100000, guid: b9be0c15efe8ad9489fdeead114d8ec5, type: 2}
---- !u!82 &2030988711
+--- !u!82 &2030988713
 AudioSource:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2090505913}
   m_GameObject: {fileID: 2030988703}
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 67ace28700052db40935ce76b900c88f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .540000021
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1973,6 +2245,7 @@ GameObject:
   - 4: {fileID: 2046329355}
   - 33: {fileID: 2046329354}
   - 23: {fileID: 2046329353}
+  - 135: {fileID: 2046329356}
   - 114: {fileID: 2046329352}
   m_Layer: 0
   m_Name: JackoLantern
@@ -2035,6 +2308,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681575160}
   m_RootOrder: 9
+--- !u!135 &2046329356
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 38db3c2f79ee62445b5dc67c12a358a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1106134777}
+  m_GameObject: {fileID: 2046329351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .152599767
+  m_Center: {x: 0, y: .119999997, z: -.0199999996}
 --- !u!1001 &2090505913
 Prefab:
   m_ObjectHideFlags: 0
@@ -2138,7 +2424,40 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11400002, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: messageGUI
+      value: 
+      objectReference: {fileID: 1872355370}
+    - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
+      propertyPath: BypassEffects
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8200002, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
   m_RootGameObject: {fileID: 2030988703}
   m_IsPrefabParent: 0

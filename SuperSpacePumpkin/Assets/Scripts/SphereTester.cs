@@ -24,7 +24,7 @@ public class SphereTester : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log(GameController.controller.PlanetHealth);
+		//Debug.Log(GameController.controller.PlanetHealth);
 	}
 
 	void OnTriggerEnter(Collider other)

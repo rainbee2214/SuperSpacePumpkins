@@ -732,6 +732,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 879ced16a2b8068478feedeea6534066, type: 2}
+      propertyPath: subdivisions
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 879ced16a2b8068478feedeea6534066, type: 2}
   m_RootGameObject: {fileID: 1500503073}
@@ -865,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b535d282d8f214db1affc9d88a3971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subdivisions: 2
+  subdivisions: 5
   radius: 1
   planetsplosion: {fileID: 100000, guid: 11c99a5655c6ddf4aac3e05bff74ead9, type: 2}
 --- !u!33 &1500503076

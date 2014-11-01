@@ -53,7 +53,6 @@ public class CameraPosition : MonoBehaviour
 			messageGUI.gameObject.SetActive(true);
 		}
 		int i = Random.Range (0, boxes.Length);
-		Debug.Log (i);
 		Skybox skybox = gameObject.GetComponent<Skybox>(); 
 		skybox.material = boxes[i];
 		position = origin;
@@ -77,9 +76,6 @@ public class CameraPosition : MonoBehaviour
 				GUI.gameObject.SetActive(true);
 				messageGUI.gameObject.SetActive(false);
 
-				AudioSource[] allAudios = Camera.main.gameObject.GetComponents<AudioSource>();
-				allAudios[0].Play();
-				allAudios[1].Play();
 			}
 		}
 
