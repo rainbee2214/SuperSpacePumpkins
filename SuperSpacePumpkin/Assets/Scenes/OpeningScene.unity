@@ -1899,6 +1899,11 @@ Prefab:
       propertyPath: m_Text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f2399b7dff101344ca38e9e4f1dd5dbd,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
   m_RootGameObject: {fileID: 1872355370}
@@ -3110,7 +3115,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: a7c4cf4d392378746bd05843c919eda4, type: 3}
+  m_Font: {fileID: 12800000, guid: f2399b7dff101344ca38e9e4f1dd5dbd, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 50
   m_FontStyle: 0
@@ -4467,7 +4472,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: a7c4cf4d392378746bd05843c919eda4, type: 3}
+  m_Font: {fileID: 12800000, guid: f2399b7dff101344ca38e9e4f1dd5dbd, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 50
   m_FontStyle: 0
@@ -4625,6 +4630,11 @@ Prefab:
       propertyPath: m_Color.rgba
       value: 2332033213
       objectReference: {fileID: 0}
+    - target: {fileID: 13200000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f2399b7dff101344ca38e9e4f1dd5dbd,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5cd5ebb94f1be4ab1e5282a2fcd8e1, type: 2}
   m_RootGameObject: {fileID: 1311384001}

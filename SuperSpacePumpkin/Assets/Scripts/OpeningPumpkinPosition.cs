@@ -39,9 +39,13 @@ public class OpeningPumpkinPosition : MonoBehaviour
 	
 	void Update()
 	{
-		if (Time.time < 19)
+		if (Time.time > 19 && Application.loadedLevelName == "OpeningScene")
 		{
+			transform.position = position;
 
+		}
+		else
+		{
 			position.x = distanceFromPlanet*Mathf.Sin(phi)*Mathf.Cos(theta);
 			position.y = distanceFromPlanet*Mathf.Sin(phi)*Mathf.Sin(theta);
 			position.z = distanceFromPlanet*Mathf.Cos(phi);
@@ -59,10 +63,6 @@ public class OpeningPumpkinPosition : MonoBehaviour
 			//		{
 			//			phi = 0;
 			//		}
-		}
-		else
-		{
-			transform.position = position;
 
 		}
 	}

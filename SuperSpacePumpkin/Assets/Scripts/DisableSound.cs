@@ -17,11 +17,11 @@ public class DisableSound : MonoBehaviour
 	{
 		allAudios = Camera.main.gameObject.GetComponents<AudioSource>();
 		allAudios[0].Play();
-		startingColor = gameObject.guiText.color;
+		startingColor = gameObject.guiTexture.color;
 	}
 	void Update () 
 	{
-		if (gameObject.guiText.HitTest(Input.mousePosition) && (Input.GetMouseButtonDown(0)))
+		if (gameObject.guiTexture.HitTest(Input.mousePosition) && (Input.GetMouseButtonDown(0)))
 		{
 			play = !play;
 		}
@@ -30,11 +30,11 @@ public class DisableSound : MonoBehaviour
 		if (!play) // I feel like this should be if (play) however, that doesn't work logically. But !play does... when play is true the music plays and when play is false it stops (by clicking on the button in the corner)
 		{
 			allAudios[0].Play(); //Background
-			gameObject.guiText.color = Color.white;
+			gameObject.guiTexture.color = Color.white;
 		}
 		else
 		{
-			gameObject.guiText.color = startingColor;
+			gameObject.guiTexture.color = startingColor;
 		}
 	}
 }

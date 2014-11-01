@@ -46,15 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DisableSound.cs" />
-     <Compile Include="Assets\GameStarter.cs" />
-     <Compile Include="Assets\PumpkinEmitter.cs" />
-     <Compile Include="Assets\SceneCamera.cs" />
+     <Compile Include="Assets\JackController.cs" />
      <Compile Include="Assets\Scripts\CameraPosition.cs" />
+     <Compile Include="Assets\Scripts\DisableSound.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GameStarter.cs" />
      <Compile Include="Assets\Scripts\OpeningPumpkinPosition.cs" />
      <Compile Include="Assets\Scripts\PivotPosition.cs" />
      <Compile Include="Assets\Scripts\PlanePosition.cs" />
+     <Compile Include="Assets\Scripts\PumpkinEmitter.cs" />
+     <Compile Include="Assets\Scripts\SceneCamera.cs" />
      <Compile Include="Assets\Scripts\ScoreTracker.cs" />
      <Compile Include="Assets\Scripts\SphereGenerator.cs" />
      <Compile Include="Assets\Scripts\SphereTester.cs" />

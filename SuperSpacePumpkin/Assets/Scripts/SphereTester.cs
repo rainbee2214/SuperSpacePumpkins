@@ -7,14 +7,9 @@ public class SphereTester : MonoBehaviour {
 	
 	public float radius = 1f;
 
-	public GameObject planetsplosion;
-	GameObject explosion;
-	Vector3 outOfView;
-
 	void Start () 
 	{
-		explosion = Instantiate (planetsplosion, new Vector3(100,100,0), Quaternion.identity) as GameObject;
-		outOfView = new Vector3(1000, 1000, 0);
+
 	}
 
 	private void Awake () 
@@ -24,20 +19,6 @@ public class SphereTester : MonoBehaviour {
 
 	void Update()
 	{
-		//Debug.Log(GameController.controller.PlanetHealth);
+		Debug.Log(GameController.controller.PlanetHealth);
 	}
-
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Pumpkin")
-		{
-			GameController.controller.PlanetHealth = -5;
-			explosion.transform.position = gameObject.transform.position;
-			explosion.gameObject.particleSystem.Play();
-			
-			//Destroy(other.gameObject);
-			
-		}
-	}
-
 }
