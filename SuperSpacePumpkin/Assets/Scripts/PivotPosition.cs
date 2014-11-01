@@ -13,6 +13,9 @@ public class PivotPosition : MonoBehaviour
 
 	public Transform target;
 	public bool addScore = false;
+
+	public float speed = 1;
+
 	void Start()
 	{
 		position = origin;
@@ -31,6 +34,13 @@ public class PivotPosition : MonoBehaviour
 			addScore = false;
 			GameController.controller.Score = 1;
 		}
+
+		//theta += Input.GetAxis("Vertical") * (-speed);
+		//phi += Input.GetAxis("Horizontal") * (-speed);
+
+		theta -= Input.GetAxis("Mouse Y") * (-speed);
+		phi -= Input.GetAxis("Mouse X") * (-speed);
+
 		position.x = rho*Mathf.Sin(phi)*Mathf.Cos(theta);
 		position.y = rho*Mathf.Sin(phi)*Mathf.Sin(theta);
 		position.z = rho*Mathf.Cos(phi);
@@ -38,6 +48,11 @@ public class PivotPosition : MonoBehaviour
 		transform.position = position;
 
 		transform.LookAt(target);
+		//if (Input.GetAxis)
+
+
+
+
 	}
 	
 }
