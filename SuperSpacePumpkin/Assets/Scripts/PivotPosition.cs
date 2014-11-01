@@ -10,7 +10,8 @@ public class PivotPosition : MonoBehaviour
 	
 	Vector3 origin = new Vector3(0,0,0);
 	Vector3 position;
-	
+
+	public bool addScore = false;
 	void Start()
 	{
 		position = origin;
@@ -24,6 +25,11 @@ public class PivotPosition : MonoBehaviour
 	
 	void Update()
 	{
+		if (addScore)
+		{
+			addScore = false;
+			GameController.controller.Score = 1;
+		}
 		position.x = rho*Mathf.Sin(phi)*Mathf.Cos(theta);
 		position.y = rho*Mathf.Sin(phi)*Mathf.Sin(theta);
 		position.z = rho*Mathf.Cos(phi);

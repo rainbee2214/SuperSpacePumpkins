@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlanePosition : MonoBehaviour 
 {
-	Vector3 rotation;
+	Quaternion rotation;
 	
 	void Start () 
 	{
@@ -12,9 +12,14 @@ public class PlanePosition : MonoBehaviour
 	
 	void Update () 
 	{
-		float x;
-		float y;
-		float z;
-		//rotation.x = 
+		float x = transform.position.x;
+		float y = transform.position.y;
+		float z = transform.position.z;
+
+		rotation.x = -(y) - Mathf.Sqrt(2)*z + 2;
+		rotation.y = -(x) - Mathf.Sqrt(2)*z + 2;
+		rotation.z = (-(x) - (y) + 2) / Mathf.Sqrt(2);
+
+		transform.rotation = rotation;
 	}
 }
