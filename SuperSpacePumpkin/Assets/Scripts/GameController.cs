@@ -7,6 +7,11 @@ public class GameController : MonoBehaviour
 	//Static reference to the GameController class
 	public static GameController controller;
 
+	public GameObject[] explosions;
+	GameObject explosion;
+	public int pool;
+	public bool toggleLevel = false;
+
 	#region Properties
 	private int score;
 	public int Score
@@ -15,7 +20,7 @@ public class GameController : MonoBehaviour
 		set{score += value;}
 	}
 
-	private int planetHealth = 10;
+	private int planetHealth = 100;
 	public int PlanetHealth
 	{
 		get{return planetHealth;}
@@ -27,6 +32,20 @@ public class GameController : MonoBehaviour
 	{
 		get{return dead;}
 		set{dead = value;}
+	}
+
+	private int level;
+	public int Level
+	{
+		get{return level;}
+		set{level += value;}
+	}
+
+	private int pumpkinSpeed;
+	public int PumpkinSpeed
+	{
+		get {return pumpkinSpeed;}
+		set {pumpkinSpeed += value;}
 	}
 	#endregion
 
@@ -48,15 +67,50 @@ public class GameController : MonoBehaviour
 
 	void Start () 
 	{
-	
+
 	}
 
 	void Update () 
 	{
+		if (score >= (Mathf.Pow(2, level)))
+		{
+			LevelUp();
+		}
+		if (toggleLevel)
+		{
+			LevelUp();
+			toggleLevel = false;
+		}
 		if (planetHealth <= 0)
 			dead = true;
 
-		//if (dead)
-			//Application.LoadLevel("Menu");
+		if (dead)
+			Application.LoadLevel("Menu");
+	}
+
+	public void Explode(string name, Vector3 position)
+	{
+		switch(name)
+		{
+		case "Planet":
+			explosion = Instantiate(explosions[0], position, Quaternion.identity) as GameObject;
+			break;
+		case "Plane":
+			explosion = Instantiate(explosions[1], position, Quaternion.identity) as GameObject;
+			break;
+		}
+		//explosion.transform.position = position;
+		explosion.gameObject.particleSystem.Play();
+	}
+
+	public void LevelUp() 
+	{
+		pumpkinSpeed += 2;
+		level++;
+		if (level > 5)
+		{
+			//Go to boss scene
+		}
+		Camera.main.camera.GetComponent<CameraPosition>().distanceFromPlanet += level;
 	}
 }

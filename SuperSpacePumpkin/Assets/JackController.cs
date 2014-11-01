@@ -7,7 +7,7 @@ public class JackController : MonoBehaviour
 	public Vector3 from;
 	public Vector3 to;
 
-	public float speed = 1.0F;
+	float speed = 1.0f;
 	private float startTime;
 	private float journeyLength = 1;
 
@@ -53,6 +53,10 @@ public class JackController : MonoBehaviour
 			float fracJourney = distCovered / journeyLength;
 			transform.position = Vector3.Lerp(from, to, fracJourney);
 		}
+		if (GameController.controller.PumpkinSpeed != speed)
+		{
+			speed = GameController.controller.PumpkinSpeed;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -66,9 +70,9 @@ public class JackController : MonoBehaviour
 		{
 			GameController.controller.Score = 1;		
 		}
-		// Explode!
-				//explosion.transform.position = gameObject.transform.position;
-				//explosion.gameObject.particleSystem.Play();
+	
+		GameController.controller.Explode(other.tag, other.gameObject.transform.position);
+				
 		Die();
 	}
 }
