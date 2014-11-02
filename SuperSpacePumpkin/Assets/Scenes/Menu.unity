@@ -266,7 +266,7 @@ GameObject:
   - 4: {fileID: 270983710}
   - 114: {fileID: 270983709}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameStarter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1229,6 +1229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   pumpkin: {fileID: 100000, guid: e59ce058c2b28be458326a8e216c3193, type: 2}
+  shootDelay: 3
+  lastShootTime: 0
 --- !u!4 &1315812596
 Transform:
   m_ObjectHideFlags: 0
@@ -2319,7 +2321,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: f857c7792a9fd5d49a627462f38343f6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .5
+  m_Volume: .25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2566,7 +2568,7 @@ Prefab:
       objectReference: {fileID: 1872355370}
     - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
       propertyPath: m_Volume
-      value: .5
+      value: .25
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
       propertyPath: m_PlayOnAwake

@@ -8,7 +8,6 @@ public class GameController : MonoBehaviour
 	public static GameController controller;
 
 	public GameObject[] explosions;
-	GameObject explosion;
 	public int pool;
 	public bool toggleLevel = false;
 
@@ -72,7 +71,7 @@ public class GameController : MonoBehaviour
 
 	void Update () 
 	{
-		if (score >= (Mathf.Pow(2, level)))
+		if((score >= (Mathf.Pow(2, level))) && !dead)
 		{
 			LevelUp();
 		}
@@ -88,14 +87,22 @@ public class GameController : MonoBehaviour
 		{
 			Application.LoadLevel("Death");
 			dead = false;
+			pumpkinSpeed = 3;
+			level = 0;
+			score = 0;
 			planetHealth = 100;
 		}
 
-		if (Application.loadedLevelName == "Menu") score = 0;
+		if (Application.loadedLevelName == "Menu") 
+		{
+			score = 0;
+			planetHealth = 100;
+		}
 	}
 
 	public void Explode(string name, Vector3 position)
 	{
+		GameObject explosion;
 		switch(name)
 		{
 		case "Planet":
@@ -103,6 +110,9 @@ public class GameController : MonoBehaviour
 			break;
 		case "Plane":
 			explosion = Instantiate(explosions[1], position, Quaternion.identity) as GameObject;
+			break;
+		default:
+			explosion = Instantiate(explosions[0], position, Quaternion.identity) as GameObject;
 			break;
 		}
 		//explosion.transform.position = position;
@@ -117,6 +127,9 @@ public class GameController : MonoBehaviour
 		{
 			//Go to boss scene
 		}
-		Camera.main.camera.GetComponent<CameraPosition>().distanceFromPlanet += level;
+		if (Application.loadedLevelName != "Death")
+		{
+			Camera.main.camera.GetComponent<CameraPosition>().distanceFromPlanet += 4;
+		}
 	}
 }

@@ -119,7 +119,7 @@ public class SceneCamera : MonoBehaviour
 
 		if (Time.time > 22)
 		{
-			Application.LoadLevel("Level");
+			Application.LoadLevel("LevelOne");
 		}
 	}
 	

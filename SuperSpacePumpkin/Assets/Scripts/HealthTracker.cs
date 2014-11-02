@@ -15,6 +15,11 @@ public class HealthTracker : MonoBehaviour
 		if (GameController.controller.PlanetHealth != currentHealth)
 		{
 			currentHealth = GameController.controller.PlanetHealth;
+			if (currentHealth < 25)
+				gameObject.guiText.color = Color.red; 
+			else
+				gameObject.guiText.color = Color.white; 
+				
 			gameObject.guiText.text = currentHealth + "%";
 		}
 	}
