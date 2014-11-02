@@ -53,7 +53,6 @@ public class OpeningPumpkinPosition : MonoBehaviour
 			transform.position = position;
 			if (this.name != "PumpkinKing")
 			{
-				float speed = 0.5f;
 				transform.LookAt(planet);
 				
 			}

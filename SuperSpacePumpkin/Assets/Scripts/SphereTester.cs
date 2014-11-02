@@ -19,6 +19,5 @@ public class SphereTester : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log(GameController.controller.PlanetHealth);
 	}
 }

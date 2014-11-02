@@ -82,13 +82,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abe19e1ff621d084bb58ff52bb332fdc, type: 3}
+  m_Script: {fileID: 11500000, guid: cf70f9a5a8fe3954681bd1b5e522c231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   from: {x: 0, y: 0, z: 0}
   to: {x: 0, y: 0, z: 0}
-  speed: 3
-  target: {fileID: 0}
+  target: {fileID: 400000, guid: 879ced16a2b8068478feedeea6534066, type: 2}
   smooth: 5
   outOfView: {x: 0, y: 0, z: 0}
   variance: .5

@@ -6,18 +6,14 @@ public class PumpkinEmitter : MonoBehaviour {
 	public Transform target;
 	public GameObject pumpkin;
 	int poolCount = 10;
-	GameObject[] pumpkins;
 	GameObject[] outOfViewPumpkins;
 	Vector3 outOfView;
-	Vector3 position;
 
 	int pumpkinCount = 0;
 
 	void Start()
 	{
-		position = outOfView;
 		outOfView = new Vector3(1000, 1000, 0);
-		pumpkins = new GameObject[poolCount];
 		outOfViewPumpkins = new GameObject[poolCount];
 		for (int i = 0; i < poolCount; i++)
 		{

@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
 		set{level += value;}
 	}
 
-	private int pumpkinSpeed;
+	private int pumpkinSpeed = 3;
 	public int PumpkinSpeed
 	{
 		get {return pumpkinSpeed;}

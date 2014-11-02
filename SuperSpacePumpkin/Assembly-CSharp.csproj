@@ -46,12 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\HealthTracker.cs" />
-     <Compile Include="Assets\JackController.cs" />
      <Compile Include="Assets\Scripts\CameraPosition.cs" />
      <Compile Include="Assets\Scripts\DisableSound.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameStarter.cs" />
+     <Compile Include="Assets\Scripts\HealthTracker.cs" />
+     <Compile Include="Assets\Scripts\JackController.cs" />
      <Compile Include="Assets\Scripts\OpeningPumpkinPosition.cs" />
      <Compile Include="Assets\Scripts\PivotPosition.cs" />
      <Compile Include="Assets\Scripts\PlanePosition.cs" />
@@ -60,7 +60,7 @@
      <Compile Include="Assets\Scripts\ScoreTracker.cs" />
      <Compile Include="Assets\Scripts\SphereGenerator.cs" />
      <Compile Include="Assets\Scripts\SphereTester.cs" />
-     <Compile Include="Assets\TimedDeath.cs" />
+     <Compile Include="Assets\Scripts\TimedDeath.cs" />
      <None Include="Assets\Fonts\Play\OFL.txt" />
      <None Include="Assets\Fonts\Walter_Turncoat\LICENSE.txt" />
      <None Include="Assets\Audio\DemonicSweaters-GameMusic\License.txt" />
