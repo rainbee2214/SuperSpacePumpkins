@@ -61,6 +61,8 @@
      <Compile Include="Assets\Scripts\SphereGenerator.cs" />
      <Compile Include="Assets\Scripts\SphereTester.cs" />
      <Compile Include="Assets\Scripts\TimedDeath.cs" />
+     <Compile Include="Assets\Scripts\levelLoader.cs" />
+     <Compile Include="Assets\scoreDeath.cs" />
      <None Include="Assets\Fonts\Play\OFL.txt" />
      <None Include="Assets\Fonts\Walter_Turncoat\LICENSE.txt" />
      <None Include="Assets\Audio\DemonicSweaters-GameMusic\License.txt" />

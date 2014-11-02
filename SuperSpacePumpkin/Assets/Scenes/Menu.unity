@@ -777,7 +777,7 @@ GameObject:
   - 4: {fileID: 900244492}
   - 132: {fileID: 900244491}
   m_Layer: 0
-  m_Name: Anykey
+  m_Name: Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +792,7 @@ GUIText:
   m_GameObject: {fileID: 900244490}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Press any key
+  m_Text: press space
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  pumpkin: {fileID: 100000, guid: 1f0a2c6f565a00841946a35f0d082cb3, type: 2}
+  pumpkin: {fileID: 100000, guid: e59ce058c2b28be458326a8e216c3193, type: 2}
 --- !u!4 &1315812596
 Transform:
   m_ObjectHideFlags: 0
@@ -1579,9 +1579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b535d282d8f214db1affc9d88a3971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subdivisions: 2
+  subdivisions: 5
   radius: 1
-  planetsplosion: {fileID: 100000, guid: 11c99a5655c6ddf4aac3e05bff74ead9, type: 2}
 --- !u!33 &1500503076
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -85,7 +85,13 @@ public class GameController : MonoBehaviour
 			dead = true;
 
 		if (dead)
-			Application.LoadLevel("Menu");
+		{
+			Application.LoadLevel("Death");
+			dead = false;
+			planetHealth = 100;
+		}
+
+		if (Application.loadedLevelName == "Menu") score = 0;
 	}
 
 	public void Explode(string name, Vector3 position)

@@ -24,6 +24,10 @@ public class CameraPosition : MonoBehaviour
 	public Material[] boxes;
 	void Start()
 	{
+		if (Application.loadedLevelName == "Death")
+		{
+			pushingCamera = false;
+		}
 		string[] messages = {
 			"save the planet!",
 			"pumpkin invaders!",
