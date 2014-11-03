@@ -213,6 +213,7 @@ MonoBehaviour:
   bullet: {fileID: 100000, guid: 82033f8a8b63a374b8ca0c06ef863b37, type: 2}
   poolCount: 40
   laserPrefab: {fileID: 100000, guid: 592939eba1a04eb46b1df7b34bc311d7, type: 2}
+  bossScene: 0
   bulletSpeed: 2
   shootDelay: .100000001
   lastShootTime: 0
@@ -393,7 +394,7 @@ Renderer:
     type: 2}
   m_PrefabInternal: {fileID: 1552450220}
   m_GameObject: {fileID: 460205531}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -1023,6 +1024,10 @@ Prefab:
     - target: {fileID: 400014, guid: 4214d28c8ff82b34fa3c277362a7f695, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 4214d28c8ff82b34fa3c277362a7f695, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4214d28c8ff82b34fa3c277362a7f695, type: 2}

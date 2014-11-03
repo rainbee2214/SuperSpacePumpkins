@@ -52,14 +52,14 @@ Material:
         first:
           name: _UpTex
         second:
-          m_Texture: {fileID: 2800000, guid: 5c4046e19400c9f44961b6350406ae65, type: 3}
+          m_Texture: {fileID: 2800000, guid: 42f68b6cc6ff3fa47b83a2664bf08ae9, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _DownTex
         second:
-          m_Texture: {fileID: 2800000, guid: 42f68b6cc6ff3fa47b83a2664bf08ae9, type: 3}
+          m_Texture: {fileID: 2800000, guid: 82671bcdbbcc6f54c86c3c2c6ed06aa8, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}

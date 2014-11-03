@@ -130,6 +130,81 @@ Prefab:
   m_RootGameObject: {fileID: 243575996}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &214022075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 214022077}
+  - 114: {fileID: 214022076}
+  - 54: {fileID: 214022078}
+  - 114: {fileID: 214022079}
+  m_Layer: 0
+  m_Name: PumpkingAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &214022076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214022075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6b9041dcf46e54d9506e8d5a6409ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1491274903}
+--- !u!4 &214022077
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214022075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 30}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1701913690}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!54 &214022078
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214022075}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &214022079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214022075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d3adf1d73de3c44bd3d9a7c50fa18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -.100000001
+  radius: 30
+  rho: 31.2299995
+  phi: 0
+  theta: 0
+  startingPosition: 0
 --- !u!1 &243575996
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +489,6 @@ Transform:
   - {fileID: 1291441508}
   - {fileID: 1064521832}
   - {fileID: 2146584879}
-  - {fileID: 1701913690}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &877273228
@@ -1120,7 +1194,6 @@ GameObject:
   - 4: {fileID: 1701913690}
   - 33: {fileID: 1701913693}
   - 23: {fileID: 1701913692}
-  - 114: {fileID: 1701913691}
   m_Layer: 0
   m_Name: PumpkinKing
   m_TagString: PumpkinKing
@@ -1134,31 +1207,13 @@ Transform:
   m_PrefabParentObject: {fileID: 400020, guid: dec5b3064d780284db121812758be263, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1701913689}
-  m_LocalRotation: {x: -3.09086232e-08, y: -.707106829, z: -.707106829, w: 3.09086232e-08}
-  m_LocalPosition: {x: 0, y: 0, z: 30}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: -.707106829}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children:
   - {fileID: 1785335867}
-  m_Father: {fileID: 517732306}
-  m_RootOrder: 4
---- !u!114 &1701913691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400014, guid: dec5b3064d780284db121812758be263,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1701913689}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d3adf1d73de3c44bd3d9a7c50fa18c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceFromPlanet: -30
-  phi: 0
-  theta: 0
-  phiSpeed: .00100000005
-  thetaSpeed: 0
-  target: {fileID: 1064521832}
+  m_Father: {fileID: 214022077}
+  m_RootOrder: 0
 --- !u!23 &1701913692
 Renderer:
   m_ObjectHideFlags: 0

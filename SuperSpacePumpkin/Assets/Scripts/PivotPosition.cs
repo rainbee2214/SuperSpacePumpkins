@@ -39,7 +39,7 @@ public class PivotPosition : MonoBehaviour
 		//phi += Input.GetAxis("Horizontal") * (-speed);
 		//Mouse Y
 		//Mouse X
-		theta -= Input.GetAxis("Vertical") * (speed / 3);
+		theta -= Input.GetAxis("Vertical") * (speed / 4);
 		phi -= Input.GetAxis("Horizontal") * (speed);
 
 		position.x = rho*Mathf.Sin(phi)*Mathf.Cos(theta);
@@ -50,10 +50,6 @@ public class PivotPosition : MonoBehaviour
 
 		transform.LookAt(target);
 		//if (Input.GetAxis)
-
-
-
-
 	}
 	
 }

@@ -101,7 +101,6 @@ public class GameController : MonoBehaviour
 		isDead = false;
 		pumpkinSpeed = 3;
 		level = 0;
-		score = 0;
 		planetHealth = 100;
 	}
 	
