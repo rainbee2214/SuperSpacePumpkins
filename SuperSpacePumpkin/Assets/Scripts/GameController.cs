@@ -26,11 +26,11 @@ public class GameController : MonoBehaviour
 		set{planetHealth += value;}
 	}
 
-	private bool dead;
-	public bool Dead
+	private bool isDead;
+	public bool IsDead
 	{
-		get{return dead;}
-		set{dead = value;}
+		get{return isDead;}
+		set{isDead = value;}
 	}
 
 	private int level;
@@ -71,7 +71,7 @@ public class GameController : MonoBehaviour
 
 	void Update () 
 	{
-		if((score >= (Mathf.Pow(2, level))) && !dead)
+		if((score >= (Mathf.Pow(2, level))) && !isDead)
 		{
 			LevelUp();
 		}
@@ -81,16 +81,12 @@ public class GameController : MonoBehaviour
 			toggleLevel = false;
 		}
 		if (planetHealth <= 0)
-			dead = true;
+			isDead = true;
 
-		if (dead)
+		if (isDead)
 		{
 			Application.LoadLevel("Death");
-			dead = false;
-			pumpkinSpeed = 3;
-			level = 0;
-			score = 0;
-			planetHealth = 100;
+			reset();
 		}
 
 		if (Application.loadedLevelName == "Menu") 
@@ -100,6 +96,15 @@ public class GameController : MonoBehaviour
 		}
 	}
 
+	void reset()
+	{
+		isDead = false;
+		pumpkinSpeed = 3;
+		level = 0;
+		score = 0;
+		planetHealth = 100;
+	}
+	
 	public void Explode(string name, Vector3 position)
 	{
 		GameObject explosion;
@@ -125,11 +130,8 @@ public class GameController : MonoBehaviour
 		level++;
 		if (level > 5)
 		{
-			//Go to boss scene
+			Application.LoadLevel("Cutscene");
 		}
-		if (Application.loadedLevelName != "Death")
-		{
-			Camera.main.camera.GetComponent<CameraPosition>().distanceFromPlanet += 4;
-		}
+		Camera.main.camera.GetComponent<CameraPosition>().distanceFromPlanet += 4;
 	}
 }

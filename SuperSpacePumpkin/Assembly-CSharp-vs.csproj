@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\CameraPosition.cs" />
      <Compile Include="Assets\Scripts\DisableSound.cs" />
+     <Compile Include="Assets\Scripts\DisplaySequence.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameStarter.cs" />
      <Compile Include="Assets\Scripts\HealthTracker.cs" />
@@ -56,13 +58,15 @@
      <Compile Include="Assets\Scripts\PivotPosition.cs" />
      <Compile Include="Assets\Scripts\PlanePosition.cs" />
      <Compile Include="Assets\Scripts\PumpkinEmitter.cs" />
+     <Compile Include="Assets\Scripts\PumpkingController.cs" />
      <Compile Include="Assets\Scripts\SceneCamera.cs" />
      <Compile Include="Assets\Scripts\ScoreTracker.cs" />
      <Compile Include="Assets\Scripts\SphereGenerator.cs" />
      <Compile Include="Assets\Scripts\SphereTester.cs" />
      <Compile Include="Assets\Scripts\TimedDeath.cs" />
+     <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\levelLoader.cs" />
-     <Compile Include="Assets\scoreDeath.cs" />
+     <Compile Include="Assets\Scripts\scoreDeath.cs" />
      <None Include="Assets\Fonts\Play\OFL.txt" />
      <None Include="Assets\Fonts\Walter_Turncoat\LICENSE.txt" />
      <None Include="Assets\Audio\DemonicSweaters-GameMusic\License.txt" />

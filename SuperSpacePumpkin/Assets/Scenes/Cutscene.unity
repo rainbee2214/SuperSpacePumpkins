@@ -906,19 +906,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
       propertyPath: m_LocalRotation.x
-      value: .707106829
+      value: .353553355
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -.612372458
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -.612372458
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.707106829
+      value: -.353553355
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
       propertyPath: m_RootOrder
@@ -932,6 +932,10 @@ Prefab:
       propertyPath: planet
       value: 
       objectReference: {fileID: 1500503074}
+    - target: {fileID: 100002, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
+      propertyPath: m_Name
+      value: Pumpking
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
   m_RootGameObject: {fileID: 2031205907}
@@ -3165,7 +3169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  pumpkin: {fileID: 100000, guid: 1f0a2c6f565a00841946a35f0d082cb3, type: 2}
+  pumpkin: {fileID: 100000, guid: e59ce058c2b28be458326a8e216c3193, type: 2}
+  shootDelay: 3
+  lastShootTime: 0
 --- !u!4 &1315812596
 Transform:
   m_ObjectHideFlags: 0
@@ -3663,9 +3669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b535d282d8f214db1affc9d88a3971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subdivisions: 2
+  subdivisions: 5
   radius: 1
-  planetsplosion: {fileID: 100000, guid: 11c99a5655c6ddf4aac3e05bff74ead9, type: 2}
 --- !u!33 &1500503076
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5279,8 +5284,6 @@ MonoBehaviour:
   king: {fileID: 2031205911}
   boxes:
   - {fileID: 2100000, guid: b8f20d5ca50d16143afc11f5e4af6fc1, type: 2}
-  - {fileID: 2100000, guid: 19e2485c6f92d6944ad20466ac77b04c, type: 2}
-  - {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
   colors:
   - {r: .681271851, g: .302283734, b: .741176486, a: .443137258}
   - {r: .349970877, g: .127889276, b: .741176486, a: .403921574}
@@ -5360,7 +5363,7 @@ GameObject:
   - 23: {fileID: 2031205909}
   - 114: {fileID: 2031205912}
   m_Layer: 0
-  m_Name: PumpkinKing
+  m_Name: Pumpking
   m_TagString: PumpkinKing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5401,7 +5404,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: ebfe2863640f23f4faa39d72b6ba3a10, type: 2}
   m_PrefabInternal: {fileID: 369015812}
   m_GameObject: {fileID: 2031205907}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: -.707106829}
+  m_LocalRotation: {x: .353553355, y: -.612372458, z: -.612372458, w: -.353553355}
   m_LocalPosition: {x: 0, y: .5, z: 6}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children:

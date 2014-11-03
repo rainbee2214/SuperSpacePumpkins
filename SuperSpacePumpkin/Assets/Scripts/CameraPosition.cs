@@ -22,34 +22,55 @@ public class CameraPosition : MonoBehaviour
 	public float targetDistance = 10f;
 
 	public Material[] boxes;
+
+	string[] SetMessages()
+	{
+		if (Application.loadedLevelName == "Tutorial")
+		{
+			string[] messages = {
+				"move with W A S D!",
+				"shoot with space!",
+				"kill the pumpkin invaders!",
+				"protect the planet!",
+				"kill the evil PUMPKING!"
+			};
+			return messages;
+		}
+		else
+		{
+			string[] messages = {
+				"save the planet!",
+				"pumpkin invaders!",
+				"death from above!",
+				"much halloween!",
+				"such jack o' lantern!",
+				"defend the planet!",
+				"all hail the pumpkin king!",
+				"spooky!",
+				"alien invaders!",
+				"save the President!",
+				"win all the candy!",
+				"binary score?",
+				"invaders!",
+				"attack of the killer pumpkins!",
+				"save the children!",
+				"trick or treat!",
+				"give me something good to eat!",
+				"attack of the super space pumpkins!",
+				"boo!",
+				"protect the people!"
+			};
+			return messages;
+		}
+	}
 	void Start()
 	{
 		if (Application.loadedLevelName == "Death")
 		{
 			pushingCamera = false;
 		}
-		string[] messages = {
-			"save the planet!",
-			"pumpkin invaders!",
-			"death from above!",
-			"much halloween!",
-			"such jack o' lantern!",
-			"defend the planet!",
-			"all hail the pumpkin king!",
-			"spooky!",
-			"alien invaders!",
-			"save the President!",
-			"win all the candy!",
-			"binary score?",
-			"invaders!",
-			"attack of the killer pumpkins!",
-			"save the children!",
-			"trick or treat!",
-			"give me something good to eat!",
-			"attack of the super space pumpkins!",
-			"boo!",
-			"protect the people!"
-		};
+	
+		string[] messages = SetMessages();
 		GUI.gameObject.SetActive(false);
 		if (Application.loadedLevelName != "Menu")
 		{

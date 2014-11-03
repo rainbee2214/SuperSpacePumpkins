@@ -25,10 +25,11 @@ public class SceneCamera : MonoBehaviour
 	string[] messages;
 	string[] messages2;
 
-
+	float startingTime;
 	public Color[] colors;
 	void Start()
 	{
+		startingTime = Time.time;
 		origin = transform.position;
 		//position = origin;
 		messages = new string[4]{
@@ -65,7 +66,7 @@ public class SceneCamera : MonoBehaviour
 	
 	void Update()
 	{
-		if (Time.time < 19)
+		if (Time.time < 19f + startingTime)
 		{
 			phi = phi + phiSpeed;
 			
@@ -79,26 +80,26 @@ public class SceneCamera : MonoBehaviour
 			{
 				messageGUI2.gameObject.guiText.text = messages2[0];
 			}
-			if (Time.time > 5.5f)
+			if (Time.time > 5.5f + startingTime)
 			{
 				messageGUI.guiText.color = colors[2];
 				messageGUI2.guiText.color = colors[3];
 				messageGUI2.gameObject.guiText.text = "";
 				messageGUI.gameObject.guiText.text = messages[1];
-				if (Time.time > 7f)
+				if (Time.time > 7f + startingTime)
 				messageGUI2.gameObject.guiText.text = messages2[1];
 			}
-			if (Time.time > 11f)
+			if (Time.time > 11f + startingTime)
 			{
 				messageGUI.guiText.color = colors[4];
 				messageGUI2.guiText.color = colors[5];
 				messageGUI2.gameObject.guiText.text = "";
 				messageGUI.gameObject.guiText.text = messages[2];
-				if (Time.time > 12.5f)
+				if (Time.time > 12.5f + startingTime)
 				messageGUI2.gameObject.guiText.text = messages2[2];
 				
 			}
-			if (Time.time > 17.25f)
+			if (Time.time > 17.25f + startingTime)
 			{
 				messageGUI.guiText.color = colors[6];
 				Vector3 currentPosition = messageGUI.transform.position;
@@ -117,9 +118,9 @@ public class SceneCamera : MonoBehaviour
 			transform.LookAt(king);
 		}
 
-		if (Time.time > 22)
+		if (Time.time > 20 + startingTime)
 		{
-			Application.LoadLevel("LevelOne");
+			Application.LoadLevel("Boss");
 		}
 	}
 	

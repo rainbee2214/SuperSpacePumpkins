@@ -14,11 +14,11 @@ public class OpeningPumpkinPosition : MonoBehaviour
 	Vector3 position;
 	void Start()
 	{	
-		if (this.name == "PumpkinKing")
+		if (this.name == "Pumpking")
 		{
 			//Generate distance from planet, phi, theta, phiSpeed
-			distanceFromPlanet = 10f;
-			phi = 2.5f;
+			distanceFromPlanet = 4.5f;
+			phi = Random.Range(2.5f, 4.5f);
 			theta = 0;
 			phiSpeed = 0.010f;
 		}
@@ -42,7 +42,6 @@ public class OpeningPumpkinPosition : MonoBehaviour
 		if (Time.time > 19 && Application.loadedLevelName == "OpeningScene")
 		{
 			transform.position = position;
-
 		}
 		else
 		{
@@ -51,17 +50,13 @@ public class OpeningPumpkinPosition : MonoBehaviour
 			position.z = distanceFromPlanet*Mathf.Cos(phi);
 			
 			transform.position = position;
-			if (this.name != "PumpkinKing")
+			if (this.name != "Pumpking")
 			{
 				transform.LookAt(planet);
 				
 			}
 			
 			phi = phi + phiSpeed;
-			//		if (phi >= bound)
-			//		{
-			//			phi = 0;
-			//		}
 
 		}
 	}
