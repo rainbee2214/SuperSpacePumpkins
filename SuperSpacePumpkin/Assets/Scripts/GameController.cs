@@ -113,6 +113,8 @@ public class GameController : MonoBehaviour
 		case "Planet":
 			explosion = Instantiate(explosions[0], position, Quaternion.identity) as GameObject;
 			break;
+		case "Bullet":
+		case "Laser":
 		case "Plane":
 			explosion = Instantiate(explosions[1], position, Quaternion.identity) as GameObject;
 			break;

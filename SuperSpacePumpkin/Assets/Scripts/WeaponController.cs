@@ -14,6 +14,8 @@ public class WeaponController : MonoBehaviour
 	
 	int bulletCount = 0;
 
+	public bool bossScene;
+
 	public float bulletSpeed = 1f;
 	
 	public float shootDelay = 3f;
@@ -22,6 +24,7 @@ public class WeaponController : MonoBehaviour
 	public float laserLifespan = 10f;
 	void Start()
 	{
+		if (Application.loadedLevelName == "Boss") bossScene = true;
 		outOfView = new Vector3(-1000, -1000, 0);
 		// Instantiate bullets
 		bullets = new GameObject[poolCount];
@@ -29,15 +32,16 @@ public class WeaponController : MonoBehaviour
 		{
 			bullets[i] = Instantiate(bullet, outOfView, Quaternion.identity) as GameObject;
 			bullets[i].name = "Bullet" + (i + 1);
+			if (bossScene) bullets[i].GetComponent<BulletController>().forward = -1;
 			bullets[i].SetActive(false);
 		}
 
 		// Instantiate laser
 		laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
 		laser.SetActive(false);
-		laser.transform.position += new Vector3(0f, 0f, 6f);
+		laser.transform.position += new Vector3(0f, 0f, bossScene ? 3f : -3f);
 		laser.transform.parent = transform;
-	}
+	} 
 	
 	void Update ()
 	{

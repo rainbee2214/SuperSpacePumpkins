@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Pivot
@@ -395,7 +396,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -719,7 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.25
   rho: 1
-  phi: 0
+  phi: .550000012
   theta: 0
   target: {fileID: 400020}
   addScore: 0
@@ -808,6 +809,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subdivisions: 5
   radius: 1
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152b9697db25555449f92bc6cfcea912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 100000, guid: 82033f8a8b63a374b8ca0c06ef863b37, type: 2}
+  poolCount: 40
+  laserPrefab: {fileID: 100000, guid: 592939eba1a04eb46b1df7b34bc311d7, type: 2}
+  bulletSpeed: 2
+  shootDelay: .100000001
+  lastShootTime: 0
+  lifespan: 10
+  laserLifespan: 10
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
