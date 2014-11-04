@@ -12,7 +12,6 @@ public class DisplaySequence : MonoBehaviour
 	float lastDisplayTime;
 	float nextDisplayTime = 0;
 	float totalDuration;
-	int currentlyDisplayed = 0;
 
 	void Start()
 	{

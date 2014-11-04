@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BossController : MonoBehaviour 
 {
+	public bool WIN;
 	public float speed;
 	public float lerpTime;
 
@@ -38,11 +39,12 @@ public class BossController : MonoBehaviour
 	
 	void Update () 
 	{
-		if (GameController.controller.BossHealth <= 0); //WinGame();
+		if (WIN) Application.LoadLevel("Win");
+		if (GameController.controller.BossHealth <= 0) Application.LoadLevel("Win");
 		transform.LookAt(target);
 		if (isLerping) transform.position = Vector3.Lerp(transform.position, nextPosition, Time.deltaTime * lerpTime);
 		if (NearNextPosition()) Step();
-		if (transform.position == target.transform.position); //LoseGame();
+		if (transform.position == target.transform.position) GameController.controller.IsDead = true;
 	}
 
 	bool NearNextPosition()
@@ -80,7 +82,6 @@ public class BossController : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log ("Boss hit " + other.tag);
 		if (other.tag == "Bullet")
 		{
 			GameController.controller.BossHealth = -2;

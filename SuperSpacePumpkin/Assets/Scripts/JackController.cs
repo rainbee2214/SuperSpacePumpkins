@@ -68,7 +68,12 @@ public class JackController : MonoBehaviour
 		else if (other.tag == "Plane" || other.tag == "Laser" || other.tag == "Bullet")
 		{
 			GameController.controller.Score = 1;
-			if (other.tag == "Bullet") other.gameObject.SetActive(false);
+			if (other.tag == "Bullet") 
+			{
+				if (Application.loadedLevelName == "Boss")
+					GameController.controller.BossHealth = -1;
+				other.gameObject.SetActive(false);
+			}
 		}
 		else if (other.tag == "Boss") return;
 	

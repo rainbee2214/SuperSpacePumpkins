@@ -46,8 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BossController.cs" />
-     <Compile Include="Assets\PumpkingAnchorController.cs" />
+     <Compile Include="Assets\Scripts\BossController.cs" />
      <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\CameraPosition.cs" />
      <Compile Include="Assets\Scripts\DisableSound.cs" />
@@ -59,7 +58,9 @@
      <Compile Include="Assets\Scripts\OpeningPumpkinPosition.cs" />
      <Compile Include="Assets\Scripts\PivotPosition.cs" />
      <Compile Include="Assets\Scripts\PlanePosition.cs" />
+     <Compile Include="Assets\Scripts\PlayerBossController.cs" />
      <Compile Include="Assets\Scripts\PumpkinEmitter.cs" />
+     <Compile Include="Assets\Scripts\PumpkingAnchorController.cs" />
      <Compile Include="Assets\Scripts\PumpkingController.cs" />
      <Compile Include="Assets\Scripts\SceneCamera.cs" />
      <Compile Include="Assets\Scripts\ScoreTracker.cs" />

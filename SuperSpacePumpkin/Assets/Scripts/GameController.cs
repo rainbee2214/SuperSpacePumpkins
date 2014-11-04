@@ -79,8 +79,7 @@ public class GameController : MonoBehaviour
 
 	void Update () 
 	{
-		Debug.Log("player health" + planetHealth);
-		if((score >= (Mathf.Pow(2, level))) && !isDead)
+		if((score >= (Mathf.Pow(2, level))) && Application.loadedLevelName == "Level")
 		{
 			LevelUp();
 		}

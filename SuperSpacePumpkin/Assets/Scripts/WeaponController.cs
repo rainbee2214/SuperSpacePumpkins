@@ -9,8 +9,12 @@ public class WeaponController : MonoBehaviour
 	Vector3 outOfView;
 
 	public GameObject laserPrefab;
+	public GUIText laserGUI;
+	public int numOfLaser = 3;
+	int laserCount;
 	GameObject laser;
 	bool isLaserOn = false;
+
 	
 	int bulletCount = 0;
 
@@ -24,6 +28,8 @@ public class WeaponController : MonoBehaviour
 	public float laserLifespan = 10f;
 	void Start()
 	{
+		laserCount = numOfLaser;
+		laserGUI.guiText.text = "...";
 		if (Application.loadedLevelName == "Boss") bossScene = true;
 		outOfView = new Vector3(-1000, -1000, 0);
 		// Instantiate bullets
@@ -45,7 +51,7 @@ public class WeaponController : MonoBehaviour
 	
 	void Update ()
 	{
-		if (Input.GetButtonDown("Fire") && Time.time > lastShootTime + shootDelay)
+		if (Input.GetButton("Fire") && Time.time > lastShootTime + shootDelay)
 		{
 			lastShootTime = Time.time;
 			ShootBullet();
@@ -53,13 +59,17 @@ public class WeaponController : MonoBehaviour
 
 		if (Input.GetButtonDown("Laser"))
 		{
-			if (!isLaserOn) ActivateLaser();
+			if (!isLaserOn && laserCount > 0) ActivateLaser();
 		}
 	}
 
 	void ActivateLaser()
 	{
 		isLaserOn = true;
+		laserCount--;
+		if (laserCount == 2) { laserGUI.guiText.text = "..";}
+		else if (laserCount == 1) { laserGUI.guiText.text = ".";}
+		else if (laserCount <= 0) { laserGUI.guiText.text = "";}
 		laser.SetActive(true);
 		Invoke("DeactivateLaser", laserLifespan);
 	}
