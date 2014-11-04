@@ -8,14 +8,10 @@ TagManager:
   - Planet
   - Pumpkin
   - Pumpking
+  - Boss
   - 
-  - PumpkinKing
   - Laser
   - Bullet
-  - 
-  - Weapon
-  - 
-  - Bullert
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

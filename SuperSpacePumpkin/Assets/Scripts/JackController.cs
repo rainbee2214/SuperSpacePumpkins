@@ -64,13 +64,13 @@ public class JackController : MonoBehaviour
 		if (other.tag == "Planet")
 		{
 			GameController.controller.PlanetHealth = -5;
-			
 		}
 		else if (other.tag == "Plane" || other.tag == "Laser" || other.tag == "Bullet")
 		{
 			GameController.controller.Score = 1;
 			if (other.tag == "Bullet") other.gameObject.SetActive(false);
 		}
+		else if (other.tag == "Boss") return;
 	
 		GameController.controller.Explode(other.tag, other.gameObject.transform.position);
 				

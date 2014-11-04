@@ -5,7 +5,7 @@ public class PumpkinEmitter : MonoBehaviour {
 
 	public Transform target;
 	public GameObject pumpkin;
-	int poolCount = 40;
+	public int poolCount = 40;
 	GameObject[] outOfViewPumpkins;
 	Vector3 outOfView;
 
@@ -30,7 +30,7 @@ public class PumpkinEmitter : MonoBehaviour {
 	{
 		if (Input.GetButtonDown("Fire"))
 		{
-			ShootPumpkin();
+			//ShootPumpkin();
 		}
 		if (Time.time > lastShootTime + shootDelay)
 		{

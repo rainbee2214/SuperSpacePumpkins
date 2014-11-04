@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
 	public GameObject[] explosions;
 	public int pool;
 	public bool toggleLevel = false;
+	bool bossReset = true;
 
 	#region Properties
 	private int score;
@@ -24,6 +25,13 @@ public class GameController : MonoBehaviour
 	{
 		get{return planetHealth;}
 		set{planetHealth += value;}
+	}
+
+	private int bossHealth = 100;
+	public int BossHealth
+	{
+		get{return bossHealth;}
+		set{bossHealth += value;}
 	}
 
 	private bool isDead;
@@ -71,6 +79,7 @@ public class GameController : MonoBehaviour
 
 	void Update () 
 	{
+		Debug.Log("player health" + planetHealth);
 		if((score >= (Mathf.Pow(2, level))) && !isDead)
 		{
 			LevelUp();
@@ -86,6 +95,7 @@ public class GameController : MonoBehaviour
 		if (isDead)
 		{
 			Application.LoadLevel("Death");
+			bossReset = true;
 			reset();
 		}
 
@@ -93,6 +103,11 @@ public class GameController : MonoBehaviour
 		{
 			score = 0;
 			planetHealth = 100;
+		}
+		if (Application.loadedLevelName == "Boss" && bossReset)
+		{
+			planetHealth = 100;
+			bossReset = false;
 		}
 	}
 
