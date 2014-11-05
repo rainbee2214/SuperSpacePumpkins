@@ -814,7 +814,6 @@ GameObject:
   - 81: {fileID: 1491274908}
   - 45: {fileID: 1491274907}
   - 82: {fileID: 1491274904}
-  - 82: {fileID: 1491274905}
   - 114: {fileID: 1491274912}
   - 54: {fileID: 1491274913}
   - 135: {fileID: 1491274906}
@@ -851,65 +850,6 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 483392e3549c86847b9d889fea3c2047, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .5
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
---- !u!82 &1491274905
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200002, guid: dec5b3064d780284db121812758be263,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1491274902}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f857c7792a9fd5d49a627462f38343f6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: .100000001
   m_Pitch: 1
   Loop: 1
   Mute: 0

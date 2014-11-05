@@ -36,6 +36,16 @@ public class CameraPosition : MonoBehaviour
 			};
 			return messages;
 		}
+		else if (Application.loadedLevelName == "Win")
+		{
+			string[] messages = {
+				"congratulations!",
+				"you saved the humans!",
+				"you killed the PUMPKING!",
+				"you protected the planet!"
+			};
+			return messages;
+		}
 		else
 		{
 			string[] messages = {
@@ -63,6 +73,7 @@ public class CameraPosition : MonoBehaviour
 			return messages;
 		}
 	}
+
 	void Start()
 	{
 		if (Application.loadedLevelName == "Death")

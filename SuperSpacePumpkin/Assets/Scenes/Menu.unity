@@ -1274,6 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   pumpkin: {fileID: 100000, guid: e59ce058c2b28be458326a8e216c3193, type: 2}
+  poolCount: 40
   shootDelay: 3
   lastShootTime: 0
 --- !u!4 &1315812596
