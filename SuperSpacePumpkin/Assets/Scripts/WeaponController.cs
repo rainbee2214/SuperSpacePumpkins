@@ -14,7 +14,6 @@ public class WeaponController : MonoBehaviour
 	int laserCount;
 	GameObject laser;
 	bool isLaserOn = false;
-
 	
 	int bulletCount = 0;
 

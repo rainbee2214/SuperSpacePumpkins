@@ -12,7 +12,6 @@ public class CameraPosition : MonoBehaviour
 
 	public Transform target;
 	public GameObject GUI;
-	public GameObject messageGUI;
 
 	Vector3 origin = new Vector3(0,0,0);
 	Vector3 position;
@@ -23,71 +22,15 @@ public class CameraPosition : MonoBehaviour
 
 	public Material[] boxes;
 
-	string[] SetMessages()
-	{
-		if (Application.loadedLevelName == "Tutorial")
-		{
-			string[] messages = {
-				"move with W A S D!",
-				"shoot with space!",
-				"kill the pumpkin invaders!",
-				"protect the planet!",
-				"kill the evil PUMPKING!"
-			};
-			return messages;
-		}
-		else if (Application.loadedLevelName == "Win")
-		{
-			string[] messages = {
-				"congratulations!",
-				"you saved the humans!",
-				"you killed the PUMPKING!",
-				"you protected the planet!"
-			};
-			return messages;
-		}
-		else
-		{
-			string[] messages = {
-				"save the planet!",
-				"pumpkin invaders!",
-				"death from above!",
-				"much halloween!",
-				"such jack o' lantern!",
-				"defend the planet!",
-				"all hail the pumpkin king!",
-				"spooky!",
-				"alien invaders!",
-				"save the President!",
-				"win all the candy!",
-				"binary score?",
-				"invaders!",
-				"attack of the killer pumpkins!",
-				"save the children!",
-				"trick or treat!",
-				"give me something good to eat!",
-				"attack of the super space pumpkins!",
-				"boo!",
-				"protect the people!"
-			};
-			return messages;
-		}
-	}
-
 	void Start()
 	{
 		if (Application.loadedLevelName == "Death")
 		{
 			pushingCamera = false;
 		}
-	
-		string[] messages = SetMessages();
-		GUI.gameObject.SetActive(false);
-		if (Application.loadedLevelName != "Menu")
-		{
-			messageGUI.gameObject.guiText.text = messages[Random.Range (0, messages.Length)];
-			messageGUI.gameObject.SetActive(true);
-		}
+
+		if (Application.loadedLevelName != "Tutorial") GUI.gameObject.SetActive(false);
+
 		int i = Random.Range (0, boxes.Length);
 		Skybox skybox = gameObject.GetComponent<Skybox>(); 
 		skybox.material = boxes[i];
@@ -108,10 +51,8 @@ public class CameraPosition : MonoBehaviour
 			if (distanceFromPlanet >= targetDistance)
 			{
 				pushingCamera = false;
-
-				GUI.gameObject.SetActive(true);
-				messageGUI.gameObject.SetActive(false);
-
+				if (Application.loadedLevelName != "Tutorial")
+					GUI.gameObject.SetActive(true);
 			}
 		}
 
@@ -123,16 +64,7 @@ public class CameraPosition : MonoBehaviour
 		transform.LookAt(target);
 
 		phi = phi + phiSpeed;
-		if (phi >= bound)
-		{
-			//phi = 0;
-		}
-
 		theta = theta + thetaSpeed;
-		if (theta >= bound)
-		{
-			//phi = 0;
-		}
 	}
 
 	void pushCameraOut() 

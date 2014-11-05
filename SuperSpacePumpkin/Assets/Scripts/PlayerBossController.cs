@@ -8,11 +8,6 @@ public class PlayerBossController : MonoBehaviour
 	public float yBound;
 	public float speed = 1f;
 
-	void Start () 
-	{
-	
-	}
-
 	void Update () 
 	{
 		if (Input.GetButton("w"))

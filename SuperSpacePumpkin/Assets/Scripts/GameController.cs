@@ -3,13 +3,11 @@ using System.Collections;
 
 public class GameController : MonoBehaviour 
 {
-
 	//Static reference to the GameController class
 	public static GameController controller;
 
 	public GameObject[] explosions;
-	public int pool;
-	public bool toggleLevel = false;
+	public bool boostLevel = false;
 	bool bossReset = true;
 
 	#region Properties
@@ -72,21 +70,17 @@ public class GameController : MonoBehaviour
 		}
 	}
 
-	void Start () 
-	{
-
-	}
-
 	void Update () 
 	{
+		if (Input.GetButtonDown("m") && Application.loadedLevelName != "Menu") Application.LoadLevel("Menu");
 		if((score >= (Mathf.Pow(2, level))) && Application.loadedLevelName == "Level")
 		{
 			LevelUp();
 		}
-		if (toggleLevel)
+		if (boostLevel)
 		{
 			LevelUp();
-			toggleLevel = false;
+			boostLevel = false;
 		}
 		if (planetHealth <= 0)
 			isDead = true;
@@ -95,7 +89,7 @@ public class GameController : MonoBehaviour
 		{
 			Application.LoadLevel("Death");
 			bossReset = true;
-			reset();
+			Reset();
 		}
 
 		if (Application.loadedLevelName == "Menu") 
@@ -105,12 +99,13 @@ public class GameController : MonoBehaviour
 		}
 		if (Application.loadedLevelName == "Boss" && bossReset)
 		{
+			pumpkinSpeed = 3;
 			planetHealth = 100;
 			bossReset = false;
 		}
 	}
 
-	void reset()
+	void Reset()
 	{
 		isDead = false;
 		pumpkinSpeed = 3;
@@ -135,7 +130,6 @@ public class GameController : MonoBehaviour
 			explosion = Instantiate(explosions[0], position, Quaternion.identity) as GameObject;
 			break;
 		}
-		//explosion.transform.position = position;
 		explosion.gameObject.particleSystem.Play();
 	}
 

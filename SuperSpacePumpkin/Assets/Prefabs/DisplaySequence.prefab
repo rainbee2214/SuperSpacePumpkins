@@ -68,21 +68,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8824e8e55e4b13e4e9e1656dfc3820ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiElement: {fileID: 13200000}
-  guiTextMessages:
-  - Move with WASD!
-  - Move with arrow keys!
-  - Shoot your weapon with space!
-  - Use your laser with Z!
-  - 'Tip: Try to stay centered on the planet!'
-  colors: []
-  betweenDelay: 2
+  guiTextMessage: {fileID: 13200000}
+  colors:
+  - {r: .741176486, g: .198197618, b: 0, a: 1}
+  - {r: .529411793, g: .101211078, b: .108367659, a: 1}
+  - {r: .741176486, g: 0, b: 0, a: 1}
+  - {r: .845588207, g: .455786973, b: .404141396, a: 1}
+  - {r: .529411793, g: .24993737, b: .147923902, a: 1}
+  - {r: .701960802, g: .407527536, b: .300053805, a: 1}
+  - {r: .741176486, g: .198197618, b: 0, a: 1}
+  startingColorIndex: 1
+  betweenDelay: 2.5
   xPosition: .5
-  yPosition: .5
+  yPosition: .300000012
   turnOnOff: 1
-  loopMessages: 0
-  randomize: 0
   displayOnlyOne: 0
+  loopMessages: 1
+  randomize: 0
+  randomizeColors: 1
+  turnOffAfter: -1
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

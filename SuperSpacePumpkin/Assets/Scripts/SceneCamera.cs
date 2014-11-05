@@ -20,35 +20,31 @@ public class SceneCamera : MonoBehaviour
 	public Transform king;
 
 	public Material[] boxes;
-
-
+	
 	string[] messages;
 	string[] messages2;
 
 	float startingTime;
-	public Color[] colors;
 	void Start()
 	{
 		startingTime = Time.time;
 		origin = transform.position;
 		//position = origin;
 		messages = new string[4]{
-			"alien message", 
-			"alien message 2",
-			"alien message 3",
+			"the humans are carving our brethren", 
+			"burning flames within our heads",
+			"it is time to put an end to this",
 			"kill all humans!"
 		};
 
 		messages2 = new string[3]{
-			"alien message ", 
-			"alien message 2",
-			"alien message 3"
+			"cooking our brains in pies", 
+			"leaving us to rot in the rain",
+			"prepare for battle"
 		};
 
 		messageGUI.gameObject.guiText.text = messages[0];
 		messageGUI.gameObject.SetActive(true);
-		messageGUI.guiText.color = colors[0];
-		messageGUI2.guiText.color = colors[1];
 		messageGUI2.gameObject.guiText.text = "";
 		messageGUI2.gameObject.SetActive(true);
 
@@ -82,8 +78,6 @@ public class SceneCamera : MonoBehaviour
 			}
 			if (Time.time > 5.5f + startingTime)
 			{
-				messageGUI.guiText.color = colors[2];
-				messageGUI2.guiText.color = colors[3];
 				messageGUI2.gameObject.guiText.text = "";
 				messageGUI.gameObject.guiText.text = messages[1];
 				if (Time.time > 7f + startingTime)
@@ -91,8 +85,6 @@ public class SceneCamera : MonoBehaviour
 			}
 			if (Time.time > 11f + startingTime)
 			{
-				messageGUI.guiText.color = colors[4];
-				messageGUI2.guiText.color = colors[5];
 				messageGUI2.gameObject.guiText.text = "";
 				messageGUI.gameObject.guiText.text = messages[2];
 				if (Time.time > 12.5f + startingTime)
@@ -101,7 +93,6 @@ public class SceneCamera : MonoBehaviour
 			}
 			if (Time.time > 17.25f + startingTime)
 			{
-				messageGUI.guiText.color = colors[6];
 				Vector3 currentPosition = messageGUI.transform.position;
 				currentPosition.y = 0.5f;
 
@@ -118,7 +109,7 @@ public class SceneCamera : MonoBehaviour
 			transform.LookAt(king);
 		}
 
-		if (Time.time > 20 + startingTime)
+		if (Time.time > 21 + startingTime)
 		{
 			Application.LoadLevel("Boss");
 		}

@@ -3,10 +3,9 @@ using System.Collections;
 
 public class GameStarter : MonoBehaviour 
 {
-	public string level;
-
 	void Update () 
 	{
-		if (Input.GetButtonDown("StartLevel")) Application.LoadLevel(level);
+		if (Input.GetButtonDown("StartLevel")) Application.LoadLevel("Level");
+		if (Input.GetButtonDown("t")) Application.LoadLevel("Tutorial");
 	}
 }

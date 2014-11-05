@@ -15,6 +15,7 @@ public class PumpkinEmitter : MonoBehaviour {
 	public float lastShootTime = 0f;
 	void Start()
 	{
+		lastShootTime = Time.time;
 		outOfView = new Vector3(1000, 1000, 0);
 		outOfViewPumpkins = new GameObject[poolCount];
 		for (int i = 0; i < poolCount; i++)

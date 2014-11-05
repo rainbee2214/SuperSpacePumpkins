@@ -3,8 +3,9 @@ using System.Collections;
 
 public class DisplaySequence : MonoBehaviour 
 {
-	public GUIText guiElement;
-	public string[] guiTextMessages;
+	public GUIText guiTextMessage;
+	//public string[] guiTextMessages;
+	string[] guiTextMessages;
 	public Color[] colors;
 	public int startingColorIndex;
 	public float betweenDelay;
@@ -18,6 +19,7 @@ public class DisplaySequence : MonoBehaviour
 	public bool loopMessages = false;
 	public bool randomize = false;
 	public bool randomizeColors = true;
+	public float turnOffAfter;
 
 	Vector2 displayPosition;
 	int currentlyDisplayed;
@@ -26,61 +28,130 @@ public class DisplaySequence : MonoBehaviour
 	float nextDisplayTime = 0;
 
 	int currentColor;
-	
+	bool turnOff;
 
 	void Start()
 	{ 
+		startTime = Time.time;
+		if (turnOffAfter != -1) 
+		{
+			turnOffAfter = turnOffAfter + startTime;
+			turnOff = true;
+		}
+		guiTextMessages = SetMessages();
 		displayPosition.x = xPosition;
 		displayPosition.y = yPosition;
-		startTime = Time.time;
 		lastDisplayTime = startTime;
 		nextDisplayTime = startTime + betweenDelay;
 		currentlyDisplayed = 0;
 		if (randomize) currentlyDisplayed = Random.Range (0, guiTextMessages.Length);
 
-		if(displayOnlyOne)
-		{
-			guiElement.gameObject.guiText.text = guiTextMessages[currentlyDisplayed];
-		}
-
-		guiElement.gameObject.transform.position = displayPosition;
+		guiTextMessage.gameObject.transform.position = displayPosition;
 
 		currentColor = randomizeColors ? Random.Range (0, colors.Length) : startingColorIndex;
-		guiElement.gameObject.guiText.color = colors[currentColor];
+		guiTextMessage.gameObject.guiText.color = colors[currentColor];
+		guiTextMessage.gameObject.guiText.text = guiTextMessages[currentlyDisplayed];
 	}
 
 	void Update()
 	{
-		guiElement.gameObject.SetActive(turnOnOff);
-		guiElement.gameObject.transform.position = displayPosition;
-		if ((Time.time > nextDisplayTime) && currentlyDisplayed < guiTextMessages.Length && !displayOnlyOne)
+		if (turnOff && Time.time > turnOffAfter)
 		{
-			if (randomize) DisplayRandomGui(); 
-			else DisplayGui();
-			lastDisplayTime = Time.time;
-			nextDisplayTime = lastDisplayTime + betweenDelay;
+			turnOnOff = false;
+			turnOff = false;
 		}
+		else
+		{
+			if ((Time.time > nextDisplayTime) && currentlyDisplayed < guiTextMessages.Length && !displayOnlyOne)
+			{
+				if (randomize) DisplayRandomGui(); 
+				else DisplayGui();
+				lastDisplayTime = Time.time;
+				nextDisplayTime = lastDisplayTime + betweenDelay;
+			}
+		}
+
+		guiTextMessage.gameObject.SetActive(turnOnOff);
+		guiTextMessage.gameObject.transform.position = displayPosition;
 
 		displayPosition.x = xPosition;
 		displayPosition.y = yPosition;
-		guiElement.gameObject.transform.position = displayPosition;
+		guiTextMessage.gameObject.transform.position = displayPosition;
 	}
 
 	void DisplayGui()
 	{
-		if (randomizeColors) guiElement.gameObject.guiText.color = colors[Random.Range (0, colors.Length)];
-		guiElement.gameObject.guiText.text = guiTextMessages[currentlyDisplayed];
 		currentlyDisplayed++;
 		if (currentlyDisplayed >= guiTextMessages.Length) 
 		{
 			currentlyDisplayed = loopMessages ? 0 : guiTextMessages.Length - 1;
 			randomizeColors = false;
 		}
+		if (randomizeColors) guiTextMessage.gameObject.guiText.color = colors[Random.Range (0, colors.Length)];
+		guiTextMessage.gameObject.guiText.text = guiTextMessages[currentlyDisplayed];
 	}
 
 	void DisplayRandomGui()
 	{
 		currentlyDisplayed = Random.Range (0, guiTextMessages.Length);
-		guiElement.gameObject.guiText.text = guiTextMessages[currentlyDisplayed];
+		guiTextMessage.gameObject.guiText.text = guiTextMessages[currentlyDisplayed];
+	}
+
+	string[] SetMessages()
+	{
+		if (Application.loadedLevelName == "Tutorial")
+		{
+			string[] messages = {
+				"move with arrow keys or WASD!",
+				"shoot with space or e!",
+				"activate laser with z or q!",
+				"return to the menu with m!",
+				"keep your shield centered!"
+			};
+			return messages;
+		}
+		else if (Application.loadedLevelName == "Win")
+		{
+			string[] messages = {
+				"congratulations!",
+				"you saved the humans!",
+				"you killed the PUMPKING!",
+				"you protected the planet!"
+			};
+			return messages;
+		}
+		else if (Application.loadedLevelName == "Level")
+		{
+			string[] messages = {
+				"save the planet!",
+				"pumpkin invaders!",
+				"death from above!",
+				"much halloween!",
+				"such jack o' lantern!",
+				"defend the planet!",
+				"all hail the pumpkin king!",
+				"spooky!",
+				"alien invaders!",
+				"save the President!",
+				"win all the candy!",
+				"binary score?",
+				"invaders!",
+				"attack of the killer pumpkins!",
+				"save the children!",
+				"trick or treat!",
+				"give me something good to eat!",
+				"attack of the super space pumpkins!",
+				"boo!",
+				"protect the people!"
+			};
+			return messages;
+		}
+		else
+		{
+			string[] messages = {
+				"No messages!"
+			};
+			return messages;
+		}
 	}
 }
