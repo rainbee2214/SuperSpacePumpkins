@@ -2114,10 +2114,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: f857c7792a9fd5d49a627462f38343f6, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: .25
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -2418,7 +2418,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
       propertyPath: m_Enabled
@@ -2430,7 +2430,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
       propertyPath: Loop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: abe4f39f319945c43a6365cc708978dc, type: 2}
       propertyPath: BypassEffects

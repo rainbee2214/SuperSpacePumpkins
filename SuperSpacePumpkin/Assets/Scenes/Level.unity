@@ -673,11 +673,11 @@ AudioSource:
   m_GameObject: {fileID: 1565871181}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 9604699e06f1908458dd0465f317c5ce, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: .600000024
+  m_audioClip: {fileID: 8300000, guid: f857c7792a9fd5d49a627462f38343f6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .0450000018
   m_Pitch: .699999988
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -733,7 +733,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 67ace28700052db40935ce76b900c88f, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: .075000003
   m_Pitch: .75
   Loop: 1
